@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <title>Bootstrap</title>
@@ -17,7 +18,7 @@
 <body>
     <!-- Exercici 1 - Sprint 2 -->
     <!-- Barra de navegació utilitzant el component de Bootstrap navBar -->
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <nav class="navbar navbar-expand-sm mt-3 mx-3">
             <!-- logotip -->
             <div class="container-fluid">
@@ -27,21 +28,22 @@
                 <!-- menú de navegació -->
                 <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuNav"
                     aria-expanded="false" aria-controls="MenuNav">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
                     <img src="/img/icon-hamburger.svg">
                 </button>
                 <div id="MenuNav" class="collapse navbar-collapse justify-content-end fs-3">
                     <ul class="navbar-nav nav-pills">
-                        <li class="nav-item">
+                        <li class="nav-item" id="navBar-btn">
                             <a class="nav-link text-muted" href="#">FEATURES</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="navBar-btn">
                             <a class="nav-link text-muted" href="#">PRICING</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="navBar-btn">
                             <a class="nav-link text-muted" href="#">CONTACT</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white bg-secondary" href="#">LOGIN</a>
+                        <li class="nav-item" id="navBar-btn">
+                            <a class="nav-link text-muted" href="#">LOGIN</a>
                         </li>
                     </ul>
                 </div>
@@ -50,23 +52,26 @@
     </div>
     <!-- contingut principal (exercici 1-part 2) -->
     <div class="container-fluid">
-        <div class="row mt-5 d-flex flex-wrap align-items-center">
-            <div class="col-12 col-sm-6 order-sm-last">
-                <img src="/img/illustration-hero.svg" class="img-fluid">            
+        <div class="row mt-5 d-flex flex-wrap align-items-center justify-content-center">
+            <div class="col-10 col-sm-6 order-sm-last">
+                <!-- <div id="main-content-shadow" class="bg-primary"> -->
+                <img src="/img/illustration-hero.svg" class="img-fluid" id="main-content-img">
+                <!-- </div>           -->
             </div>
-
-            <div class="col-12 justify-content-center col-sm-6">
-                <h2 class="text-dark mx-4 text-center text-sm-start">A Simple Bookmark Manager</h2>
-                <p class="text-dark fs-4 fw-light mx-4 text-center text-sm-start">A clean and simple interface to
+            <div class="col-10 justify-content-center col-sm-5">
+                <h2 class="text-dark text-center text-sm-start">A Simple Bookmark Manager</h2>
+                <p class="text-dark fs-4 fw-light text-center text-sm-start">A clean and simple interface to
                     organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it
                     for free.</p>
-                <div class="nav justify-content-center">
+                <div class="nav justify-content-center justify-content-sm-start">
                     <ul class="nav nav-pills">
-                        <li class="nav-item shadow rounded">
-                            <a class="nav-link text-white active bg-primary fs-5 fw-lighter">Get it on Chrome</a>
+                        <li class="nav-item" id="get-browser-btn">
+                            <button class="btn nav-link text-dark fs-5 fw-lighter shadow rounded">Get it on
+                                Chrome</button>
                         </li>
-                        <li class="nav-item ms-3">
-                            <a class="nav-link text-dark bg-light shadow rounded fs-5 fw-lighter">Get it on Firefox</a>
+                        <li class="nav-item ms-3" id="get-browser-btn">
+                            <button class=" btn nav-link text-dark shadow rounded fs-5 fw-lighter">Get it on
+                                Firefox</button>
                         </li>
                     </ul>
                 </div>
@@ -76,5 +81,92 @@
     </div>
 
     <!-- exercici 2 - sprint 2 -->
+    <div class="container-fluid mt-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-8 col-sm-6 justify-content-sm-center">
+                <h2 class="text-dark text-center">Features</h2>
+                <p class="text-dark fs-4 fw-light text-center">Our aim is to make it quick and easy for you to access
+                    your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="nav flex-column align-items-center flex-sm-row justify-content-sm-center">
+                <li class="nav-item">
+                    <a class="nav-link text-dark fs-4" id="features-link" href="#">Simple Boomarking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fs-4" id="features-link" href="#">Sppedy Searching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fs-4" id="features-link" href="#">Easy Sharing</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-10 col-sm-6">
+                <img src="/img/illustration-features-tab-1.svg" class="img-fluid">
+            </div>
+            <div class="col-10 col-sm-6 mt-5">
+                <h2 class="text-dark text-center text-sm-start">Bookmark in one click</h2>
+                <p class="text-dark fs-4 fw-light text-center text-sm-start">Organize your bookmarks however you like.
+                    Our simple drag-and-drop interface gives your complete control over how you manage your favourite
+                    sites.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- exercici 3 - sprint 2 -->
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center mt-5">
+            <div class="col-10 col-sm-6">
+                <h2 class="text-dark text-center text-sm-start">Download the extension</h2>
+                <p class="text-dark fs-4 fw-light text-center text-sm-start">We've got more browsers in the pipeline.
+                    Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+             <!-- Chrome -->
+             <div class="col-10 col-sm-3 d-flex justify-content-center">
+                 <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-0" style="width: fit-content;">
+                    <img src="/img/logo-chrome.svg" class="card-img-top p-3 mx-auto d-block" style="width: 10rem;">
+                    <div class="card-body">
+                        <h3 class="card-title text-dark text-center mt-3">Add to Chrome</h3>
+                        <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 62</p>
+                        <img src="/img/bg-dots.svg" class="img-fluid mt-3">
+                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3" href="#">Add & Install Extension</button>
+                    </div>
+                </div>
+            </div>
+                <!-- Firefox -->
+            <div class="col-10 col-sm-3 d-flex justify-content-center">
+                <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-3 mx-3" style="width: fit-content;">
+                    <img src="/img/logo-firefox.svg" class="card-img-top p-3 mx-auto d-block" style="width: 10rem;">
+                    <div class="card-body">
+                        <h3 class="card-title text-dark text-center mt-3">Add to Firedox</h3>
+                        <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 55</p>
+                        <img src="/img/bg-dots.svg" class="img-fluid mt-3">
+                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3" href="#">Add & Install Extension</button>
+                    </div>
+                </div>
+            </div>
+                <!-- Opera -->
+                <div class="col-10 col-sm-3 d-flex justify-content-center">
+                    <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-5" style="width: fit-content;">
+                        <img src="/img/logo-opera.svg" class="card-img-top p-3 mx-auto d-block" style="width: 10rem;">
+                    <div class="card-body">
+                        <h3 class="card-title text-dark text-center mt-3">Add to Opera</h3>
+                        <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 46</p>
+                        <img src="/img/bg-dots.svg" class="img-fluid mt-3">
+                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3" href="#">Add & Install Extension</button>
+                    </div>
+                </div>
+            </div>
+        </div>>
+
+    </div>
+
+    </div>
 </body>
+
 </html>

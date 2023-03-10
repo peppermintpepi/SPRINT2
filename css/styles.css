@@ -1,0 +1,23 @@
+#navBar-btn:hover {
+    background-color: #FA5959 !important;
+    color: azure !important;
+    border-radius: 0.5rem !important;
+}
+
+#main-content-shadow {
+    display: inline;
+    padding: 4rem;
+    border-radius: 5rem;
+    margin: 50% 0 0 50%;
+}
+
+#get-browser-btn:hover {
+    background-color: #5265E1 !important;
+    color: aliceblue !important;
+    border-radius: 0.5rem;
+}
+
+#features-link:hover {
+    font-weight: bold;
+    border-bottom: 0.3rem solid #FA5959;
+}
