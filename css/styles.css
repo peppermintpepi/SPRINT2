@@ -1,8 +1,8 @@
-#navBar-btn:hover {
+/* #navBar-btn:hover {
     background-color: #FA5959 !important;
     color: azure !important;
     border-radius: 0.5rem !important;
-}
+} */
 
 #main-content-shadow {
     display: inline;
@@ -17,7 +17,7 @@
     border-radius: 0.5rem;
 }
 
-#features-link:hover {
+/* #features-link:hover {
     font-weight: bold;
     border-bottom: 0.3rem solid #FA5959;
-}
+} */
