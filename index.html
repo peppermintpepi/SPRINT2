@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <title>Bootstrap</title>
@@ -28,10 +27,9 @@
                 <!-- menú de navegació -->
                 <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuNav"
                     aria-expanded="false" aria-controls="MenuNav">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
                     <img src="/img/icon-hamburger.svg">
                 </button>
-                <div id="MenuNav" class="collapse navbar-collapse justify-content-end fs-3">
+                <div id="MenuNav" class="collapse navbar-collapse justify-content-end fs-3 mx-4">
                     <ul class="navbar-nav nav-pills">
                         <li class="nav-item" id="navBar-btn">
                             <a class="nav-link text-muted" href="#">FEATURES</a>
@@ -53,10 +51,9 @@
     <!-- contingut principal (exercici 1-part 2) -->
     <div class="container-fluid">
         <div class="row mt-5 d-flex flex-wrap align-items-center justify-content-center">
-            <div class="col-10 col-sm-6 order-sm-last">
-                <!-- <div id="main-content-shadow" class="bg-primary"> -->
-                    <img src="/img/illustration-hero.svg" class="img-fluid" id="main-content-img">
-                <!-- </div> -->
+            <div class="col-10 col-sm-6 order-sm-last" id="main-content">
+                <!--                 <span class="main-content-shape">   </span> -->
+                <img src="/img/illustration-hero.svg" class="img-fluid main-content-img" id="main-content-img">
             </div>
             <div class="col-10 justify-content-center col-sm-5">
                 <h2 class="text-dark text-center text-sm-start">A Simple Bookmark Manager</h2>
@@ -66,11 +63,13 @@
                 <div class="nav justify-content-center justify-content-sm-start">
                     <ul class="nav nav-pills">
                         <li class="nav-item" id="get-browser-btn">
-                            <button class="btn nav-link text-white bg-primary fs-5 fw-lighter shadow rounded">Get it on
+                            <button type="button"
+                                class="btn nav-link text-dark btn-primary fs-5 fw-lighter shadow rounded">Get it on
                                 Chrome</button>
                         </li>
                         <li class="nav-item ms-3" id="get-browser-btn">
-                            <button class=" btn nav-link text-dark bg-light shadow rounded fs-5 fw-lighter">Get it on
+                            <button type="button"
+                                class=" btn nav-link text-dark btn-primary shadow rounded fs-5 fw-lighter">Get it on
                                 Firefox</button>
                         </li>
                     </ul>
@@ -115,7 +114,8 @@
                 <p class="text-muted fs-4 fw-light text-center text-sm-start">Organize your bookmarks however you like.
                     Our simple drag-and-drop interface gives your complete control over how you manage your favourite
                     sites.</p>
-                <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0" href="#">More
+                <button type="button" class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0"
+                    href="#">More
                     info</button>
             </div>
         </div>
@@ -140,7 +140,8 @@
                         <h3 class="card-title text-dark text-center mt-3">Add to Chrome</h3>
                         <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 62</p>
                         <img src="/img/bg-dots.svg" class="img-fluid mt-3">
-                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
+                        <button type="button"
+                            class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
                             href="#">Add
                             & Install Extension</button>
                     </div>
@@ -194,8 +195,9 @@
                     <div class="accordion accordion-flush" id="accordionFAQ">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-what-is">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#FAQ-what-is" aria-expanded="true" aria-controls="FAQ-what-is">
+                                <button class="accordion-button collapsed text-dark" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#FAQ-what-is" aria-expanded="true"
+                                    aria-controls="FAQ-what-is">
                                     What is Bookmark?
                                 </button>
                             </h2>
@@ -213,8 +215,8 @@
                         <!-- how can i request a new browser -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-new-browser">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#FAQ-new-browser" aria-expanded="true"
+                                <button class="accordion-button collapsed text-dark" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#FAQ-new-browser" aria-expanded="true"
                                     aria-controls="#FAQ-new-browser">
                                     How can I request a new browser?
                                 </button>
@@ -237,8 +239,8 @@
                         <!-- Is there a mobile app? -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-mobile-app">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#FAQ-mobile-app" aria-expanded="true"
+                                <button class="accordion-button collapsed text-dark" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#FAQ-mobile-app" aria-expanded="true"
                                     aria-controls="FAQ-mobile-app">
                                     Is there a mobile app?
                                 </button>
@@ -261,8 +263,9 @@
                         <!-- Chromium browser -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-chromium">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#FAQ-chromium" aria-expanded="true" aria-controls="FAQ-chromium">
+                                <button class="accordion-button collapsed text-dark" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#FAQ-chromium" aria-expanded="true"
+                                    aria-controls="FAQ-chromium">
                                     What about other Chromium browsers?
                                 </button>
                             </h2>
@@ -281,10 +284,74 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block" href="#">More
+                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mt-5" href="#">More
                             info</button>
                     </div>
                 </div>
+            </div>
+
+            <!-- Exercici 5 (nivell 2) - Sprit 2 -->
+            <!-- form -->
+            <div class="container-fluid bg-primary mt-5 p-5">
+                <div class="row justify-content-center">
+                    <div class="col-8 co-sm-6">
+                        <p class="text-white fs-5 text-center">35.000+ ALREADY JOINED</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-6">
+                        <h2 class="text-white text-center">Stay up-to-date with what we're doing</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center my-3">
+                    <div class="col-10 col-sm-5">
+                        <form class="was-validated">
+                            <input type="email" class="form-control" placeholder="Enter your email adress"></input>
+                        </form>
+                    </div>
+                    <div class="col-10 col-sm-2 mt-3 mt-sm-0 d-grid">
+                        <button type="button" class="btn btn-secondary text-white btn-block fs-6">Contact Us</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Footer -->
+            <div class="container-fluid bg-dark">
+
+                <nav class="navbar navbar-expand-sm">
+                    <div class="container-fluid justify-content-sm-start justify-content-center">
+                        <a class="navbar-brand w-50" id="white-logo-text">
+                            <img src="/img/logo-bookmark.svg">
+                        </a>
+                    </div>
+                    <div id="MenuNav" class="container-fluid justify-content-center">
+                        <ul class="navbar navbar-nav align-content-center">
+                            <li class="nav-item" id="navBar-btn">
+                                <a class="nav-link text-white fs-5" href="#">FEATURES</a>
+                            </li>
+                            <li class="nav-item" id="navBar-btn">
+                                <a class="nav-link text-white fs-5" href="#">PRICING</a>
+                            </li>
+                            <li class="nav-item" id="navBar-btn">
+                                <a class="nav-link text-white fs-5" href="#">CONTACT</a>
+                            </li>
+                            <li class="nav-item" id="navBar-btn">
+                                <a class="nav-link text-white fs-5" href="#">LOGIN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="row justify-content-center justify-content-sm-end pb-4">
+                        <div class="col-1">
+                            <div class="socials-logo mw-50" href="#"><img src="/img/icon-facebook.svg"></div>
+                        </div>
+                        <div class="col-1">
+                            <div class="mx-1 socials-logo" href="#"><img src="/img/icon-twitter.svg"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 </body>
 

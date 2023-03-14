@@ -1,7 +1,32 @@
 //custom color
 $primary: #5265E1;
 $secondary: #FA5959;
+$dark: rgb(27, 30, 54);
 $font-size-base: 0.5rem;
+$accordion-button-color: #5265E1;
+
+@mixin shape($left-position) {
+    background-color: $primary;
+    padding: 6.5rem;
+    width: auto;
+    border-radius: 5rem;
+    display: inline-block; 
+    position: relative;
+    left: $left-position;
+}
+
+.main-content-shape {
+    @include shape;
+}
+
+#white-logo-text {
+    filter: brightness(2);
+}
+
+.socials-logo {
+    max-width: 50%;
+    height: auto;
+}
 
 //import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
