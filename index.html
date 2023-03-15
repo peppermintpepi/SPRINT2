@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/css/main.min.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <title>Bootstrap</title>
 </head>
 
@@ -18,7 +21,7 @@
     <!-- Exercici 1 - Sprint 2 -->
     <!-- Barra de navegació utilitzant el component de Bootstrap navBar -->
     <div class="container-fluid mb-5">
-        <nav class="navbar navbar-expand-sm mt-3 mx-3">
+        <nav class="navbar navbar-expand-sm mt-3 mx-3 fixed-top">
             <!-- logotip -->
             <div class="container-fluid">
                 <a class="navbar-brand">
@@ -64,12 +67,12 @@
                     <ul class="nav nav-pills">
                         <li class="nav-item" id="get-browser-btn">
                             <button type="button"
-                                class="btn nav-link text-dark btn-primary fs-5 fw-lighter shadow rounded">Get it on
+                                class="btn nav-link text-dark btn-primary fs-5 fw-lighter shadow rounded p-2">Get it on
                                 Chrome</button>
                         </li>
                         <li class="nav-item ms-3" id="get-browser-btn">
                             <button type="button"
-                                class=" btn nav-link text-dark btn-primary shadow rounded fs-5 fw-lighter">Get it on
+                                class=" btn nav-link text-dark btn-primary shadow rounded fs-5 fw-lighter p-2">Get it on
                                 Firefox</button>
                         </li>
                     </ul>
@@ -89,34 +92,86 @@
                 </p>
             </div>
         </div>
-        <div class="container">
-            <ul class="nav flex-column align-items-center flex-sm-row justify-content-sm-center">
-                <li class="nav-item">
-                    <a class="nav-link text-dark fs-4 fw-bold border-bottom border-secondary border-4"
-                        id="features-link" href="#">Simple Boomarking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-muted fs-4 border-bottom border-muted" id="features-link" href="#">Spedy
-                        Searching</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-muted fs-4 border-bottom border-muted" id="features-link" href="#">Easy
-                        Sharing</a>
-                </li>
-            </ul>
-        </div>
-        <div class="row justify-content-center mt-3">
-            <div class="col-10 col-sm-6">
-                <img src="/img/illustration-features-tab-1.svg" class="img-fluid">
-            </div>
-            <div class="col-10 col-sm-6 mt-5">
-                <h2 class="text-dark text-center text-sm-start">Bookmark in one click</h2>
-                <p class="text-muted fs-4 fw-light text-center text-sm-start">Organize your bookmarks however you like.
-                    Our simple drag-and-drop interface gives your complete control over how you manage your favourite
-                    sites.</p>
-                <button type="button" class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0"
-                    href="#">More
-                    info</button>
+        <div class="container-fluid">
+            <nav id="features-tab-edit">
+                <div class="nav nav-tabs flex-column align-items-center flex-sm-row justify-content-sm-center"
+                    id="features-tab" role="tablist">
+                    <button class="nav-link active text-muted fs-4 border-bottom border-muted"
+                        data-bs-toggle="tab" data-bs-target="#simple-bookmark" type="button" role="tab"
+                        aria-controls="simple-bookmark" aria-selected="true" id="simple-bookmarking-tab">Simple
+                        Boomarking</button>
+
+                    <button class="nav-link text-muted fs-4 border-bottom border-muted" id="speed-search-tab"
+                        data-bs-toggle="tab" data-bs-target="#speed-search" type="button" role="tab"
+                        aria-controls="speed-search" aria-selected="false">Speedy
+                        Searching</button>
+
+                    <button class="nav-link text-muted fs-4 border-bottom border-muted" id="easy-sharing-tab"
+                        data-bs-toggle="tab" data-bs-target="#easy-sharing" type="button" role="tab"
+                        aria-controls="easy-sharing" aria-selected="false">Easy
+                        Sharing</button>
+                </div>
+            </nav>
+
+            <div class="container-fluid tab-content" id="features-content">
+                <div class="tab-pane fade show active mt-5" id="simple-bookmark"
+                    role="tabpanel" aria-labelledby="simple-bookmarking-tab">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-sm-6">
+                            <img src="/img/illustration-features-tab-1.svg" class="img-fluid">
+                        </div>
+                        <div class="col-10 col-sm-6 mt-4">
+                            <h2 class="text-dark text-center text-sm-start mt-sm-4">Bookmark in one click</h2>
+                            <p class="text-muted fs-4 fw-light text-center text-sm-start">Organize your bookmarks however
+                                you
+                                like. Our simple drag-and-drop interface gives you complete control over how you manage your
+                                favourite sites.</p>
+                            <button type="button"
+                                class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0" href="#">More
+                                info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane mt-5" id="speed-search" role="tabpanel"
+                    aria-labelledby="speed-search-tab">
+                    <div class="justify-content-center row">
+                        <div class="col-10 col-sm-6">
+                            <img src="/img/illustration-features-tab-2.svg" class="img-fluid">
+                        </div>
+                        <div class="col-10 col-sm-6 mt-5">
+                            <h2 class="text-dark text-center text-sm-start">Fast Search</h2>
+                            <p class="text-muted fs-4 fw-light text-center text-sm-start mt-4">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Ut consectetur a risus a
+                                tempus. Mauris sed justo sed augue lobortis tempor id at erat. Mauris odio neque,
+                                accumsan sed feugiat eu, suscipit eu sem. Mauris ut felis vitae libero pellentesque
+                                scelerisque porttitor in sapien. Morbi vel enim vel metus pulvinar elementum.
+                                Suspendisse potenti. Donec ac finibus diam, id malesuada nisl. Ut quis nisi enim.</p>
+                            <button type="button"
+                                class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0" href="#">More
+                                info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane mt-5" id="easy-sharing" role="tabpanel"
+                    aria-labelledby="simple-bookmarking-tab">
+                    <div class="justify-content-center row">
+                        <div class="col-10 col-sm-6">
+                            <img src="/img/illustration-features-tab-3.svg" class="img-fluid">
+                        </div>
+                        <div class="col-10 col-sm-6 mt-5">
+                            <h2 class="text-dark text-center text-sm-start">Easy Sharing</h2>
+                            <p class="text-muted fs-4 fw-light text-center text-sm-start mt-4">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Ut consectetur a risus a
+                                tempus. Mauris sed justo sed augue lobortis tempor id at erat. Mauris odio neque,
+                                accumsan sed feugiat eu, suscipit eu sem. Mauris ut felis vitae libero pellentesque
+                                scelerisque porttitor in sapien. Morbi vel enim vel metus pulvinar elementum.
+                                Suspendisse potenti. Donec ac finibus diam, id malesuada nisl. Ut quis nisi enim.</p>
+                            <button type="button"
+                                class="btn text-light btn-primary fs-5 mt-3 nav-pills mx-auto d-block mx-sm-0" href="#">More
+                                info</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -126,13 +181,14 @@
         <div class="row align-items-center justify-content-center mt-5">
             <div class="col-10 col-sm-6">
                 <h2 class="text-dark text-center text-sm-start">Download the extension</h2>
-                <p class="text-muted fs-4 fw-light text-center text-sm-start">We've got more browsers in the pipeline.
+                <p class="text-muted fs-4 fw-light text-center text-sm-start">We've got more browsers in the
+                    pipeline.
                     Please do let us know if you've got a favourite you'd like us to prioritize.</p>
             </div>
         </div>
         <div class="row align-items-center justify-content-center">
             <!-- Chrome -->
-            <div class="col-10 col-sm-3 d-flex justify-content-center">
+            <div class="col-10 col-sm-4 col-md-3 d-flex justify-content-center">
                 <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-0"
                     style="width: fit-content;">
                     <img src="/img/logo-chrome.svg" class="card-img-top p-3 mx-auto d-block" style="width: 7.5rem;">
@@ -148,30 +204,30 @@
                 </div>
             </div>
             <!-- Firefox -->
-            <div class="col-10 col-sm-3 d-flex justify-content-center mt-sm-3">
-                <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-3 mx-2"
+            <div class="col-10 col-sm-4 col-md-3 d-flex justify-content-center mt-sm-3">
+                <div class="card justify-content-center bg-light shadow rounded mt-3 mt-sm-3 mx-2"
                     style="width: fit-content;">
                     <img src="/img/logo-firefox.svg" class="card-img-top p-3 mx-auto d-block" style="width: 7.5rem;">
                     <div class="card-body">
                         <h3 class="card-title text-dark text-center mt-3">Add to Firedox</h3>
-                        <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 55</p>
+                        <p class="card-text text-dark fw-light text-center">Minimum version 55</p>
                         <img src="/img/bg-dots.svg" class="img-fluid mt-3">
-                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
+                        <button class="btn text-light bg-primary mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
                             href="#">Add
                             & Install Extension</button>
                     </div>
                 </div>
             </div>
             <!-- Opera -->
-            <div class="col-10 col-sm-3 d-flex justify-content-center">
-                <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-5"
+            <div class="col-10 col-sm-4 col-md-3 d-flex justify-content-center mt-sm-5">
+                <div class="card justify-content-center bg-light shadow rounded mt-5 mt-sm-3"
                     style="width: fit-content;">
                     <img src="/img/logo-opera.svg" class="card-img-top p-3 mx-auto d-block" style="width: 7.5rem;">
                     <div class="card-body">
                         <h3 class="card-title text-dark text-center mt-3">Add to Opera</h3>
-                        <p class="card-text text-dark fs-5 fw-light text-center">Minimum version 46</p>
+                        <p class="card-text text-dark fw-light text-center">Minimum version 46</p>
                         <img src="/img/bg-dots.svg" class="img-fluid mt-3">
-                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
+                        <button class="btn text-light bg-primary mt-3 nav-pills mx-auto d-block mb-3 px-5 px-sm-3"
                             href="#">Add
                             & Install Extension</button>
                     </div>
@@ -184,7 +240,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-8 justify-content-sm-center">
                     <h2 class="text-dark text-center">Frequently Asked Questions</h2>
-                    <p class="text-muted fs-4 fw-light text-center">Here are some of our FAQs. If you have any other
+                    <p class="text-muted fw-light text-center fs-4">Here are some of our FAQs. If you have any other
                         questions you'd like answered please feel free to email us.
                     </p>
                 </div>
@@ -195,33 +251,37 @@
                     <div class="accordion accordion-flush" id="accordionFAQ">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-what-is">
-                                <button class="accordion-button collapsed text-dark" type="button"
+                                <button class="accordion-button collapsed text-dark fs-5" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#FAQ-what-is" aria-expanded="true"
                                     aria-controls="FAQ-what-is">
                                     What is Bookmark?
                                 </button>
                             </h2>
-                            <div id="FAQ-what-is" class="accordion-collapse collapse" aria-labelledby="heading-what-is"
+                            <div id="FAQ-what-is" class="accordion-collapse collapse fs-4" aria-labelledby="heading-what-is"
                                 data-bs-parent="#accordionFAQ">
                                 <div class="accordion-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur a risus a
-                                    tempus. Mauris sed justo sed augue lobortis tempor id at erat. Mauris odio neque,
-                                    accumsan sed feugiat eu, suscipit eu sem. Mauris ut felis vitae libero pellentesque
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur a risus
+                                    a
+                                    tempus. Mauris sed justo sed augue lobortis tempor id at erat. Mauris odio
+                                    neque,
+                                    accumsan sed feugiat eu, suscipit eu sem. Mauris ut felis vitae libero
+                                    pellentesque
                                     scelerisque porttitor in sapien. Morbi vel enim vel metus pulvinar elementum.
-                                    Suspendisse potenti. Donec ac finibus diam, id malesuada nisl. Ut quis nisi enim.
+                                    Suspendisse potenti. Donec ac finibus diam, id malesuada nisl. Ut quis nisi
+                                    enim.
                                 </div>
                             </div>
                         </div>
                         <!-- how can i request a new browser -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-new-browser">
-                                <button class="accordion-button collapsed text-dark" type="button"
+                                <button class="accordion-button collapsed text-dark fs-5" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#FAQ-new-browser" aria-expanded="true"
                                     aria-controls="#FAQ-new-browser">
                                     How can I request a new browser?
                                 </button>
                             </h2>
-                            <div id="#FAQ-new-browser" class="accordion-collapse collapse"
+                            <div id="FAQ-new-browser" class="accordion-collapse collapse fs-4"
                                 aria-labelledby="heading-new-browser" data-bs-parent="#accordionFAQ">
                                 <div class="accordion-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur a risus
@@ -239,13 +299,13 @@
                         <!-- Is there a mobile app? -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-mobile-app">
-                                <button class="accordion-button collapsed text-dark" type="button"
+                                <button class="accordion-button collapsed text-dark fs-5" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#FAQ-mobile-app" aria-expanded="true"
                                     aria-controls="FAQ-mobile-app">
                                     Is there a mobile app?
                                 </button>
                             </h2>
-                            <div id="FAQ-mobile-app" class="accordion-collapse collapse"
+                            <div id="FAQ-mobile-app" class="accordion-collapse collapse fs-4"
                                 aria-labelledby="heading-new-browser" data-bs-parent="#accordionFAQ">
                                 <div class="accordion-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur a risus
@@ -263,13 +323,13 @@
                         <!-- Chromium browser -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-chromium">
-                                <button class="accordion-button collapsed text-dark" type="button"
+                                <button class="accordion-button collapsed text-dark fs-5" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#FAQ-chromium" aria-expanded="true"
                                     aria-controls="FAQ-chromium">
                                     What about other Chromium browsers?
                                 </button>
                             </h2>
-                            <div id="FAQ-chromium" class="accordion-collapse collapse"
+                            <div id="FAQ-chromium" class="accordion-collapse collapse fs-4"
                                 aria-labelledby="heading-chromium" data-bs-parent="#accordionFAQ">
                                 <div class="accordion-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur a risus
@@ -284,7 +344,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn text-light bg-primary fs-5 mt-3 nav-pills mx-auto d-block mt-5" href="#">More
+                        <button class="btn text-light bg-primary mt-3 nav-pills mx-auto d-block mt-5" href="#">More
                             info</button>
                     </div>
                 </div>
@@ -295,7 +355,7 @@
             <div class="container-fluid bg-primary mt-5 p-5">
                 <div class="row justify-content-center">
                     <div class="col-8 co-sm-6">
-                        <p class="text-white fs-5 text-center">35.000+ ALREADY JOINED</p>
+                        <p class="text-white text-center">35.000+ ALREADY JOINED</p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -310,7 +370,8 @@
                         </form>
                     </div>
                     <div class="col-10 col-sm-2 mt-3 mt-sm-0 d-grid">
-                        <button type="button" class="btn btn-secondary text-white btn-block fs-6">Contact Us</button>
+                        <button type="button" class="btn btn-secondary text-white btn-block">Contact
+                            Us</button>
                     </div>
                 </div>
 

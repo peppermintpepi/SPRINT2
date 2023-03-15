@@ -2,7 +2,7 @@
 $primary: #5265E1;
 $secondary: #FA5959;
 $dark: rgb(27, 30, 54);
-$font-size-base: 0.5rem;
+// $font-size-base: 0.5rem;
 $accordion-button-color: #5265E1;
 
 @mixin shape($left-position) {
@@ -10,7 +10,7 @@ $accordion-button-color: #5265E1;
     padding: 6.5rem;
     width: auto;
     border-radius: 5rem;
-    display: inline-block; 
+    display: inline-block;
     position: relative;
     left: $left-position;
 }
@@ -26,6 +26,11 @@ $accordion-button-color: #5265E1;
 .socials-logo {
     max-width: 50%;
     height: auto;
+}
+
+#features-tab-edi :active {
+    border-bottom: $secondary;
+    border-radius: 1rem;
 }
 
 //import bootstrap
